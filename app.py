@@ -9,7 +9,7 @@ def home():
         username = request.form['username']
         password = request.form['password']
         db_ent = open("database/db_1", 'a')     #Opening database file (i.e txt file)
-        db_ent.write("\n \n" + username + " : " + password + "     [*] {}".format(datetime.datetime.utcnow().strftime("%A %b %Y and Time was  : %I:%M:%S")))   #writing username : password and datetime to each new line with append mode :
+        db_ent.write("\n \n" + username + " : " + password + "     [*] {}".format(datetime.datetime.now().strftime("%A %b %Y and Time was  : %I:%M:%S")))   #writing username : password and datetime to each new line with append mode :
         db_ent.close()
     return render_template('login.html')
 
